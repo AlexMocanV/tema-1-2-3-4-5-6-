@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,uc,y,i,c,s=0;
+    for(i=10;i<=1000;i++)
+    {
+        c=i;
+        s=0;
+        while(c>0)
+        {
+            uc=c%10;
+            s+=uc;
+            c=c/10;
+        }
+        if(s*s==i)
+        {
+            cout<<i<<" ";
+        }
+    }
+    return 0;
+}
