@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+bool ok=0;
+int main()
+{
+    int n,uc,y,i,c,s=0,p,uc1,uc2;
+    cin>>n;
+    for(i=2;i<=n;i++)
+    {
+        p=i*i;
+        c=i*i*i;
+        ok=0;
+        while(c>0)
+        {
+            uc1=c%10;
+            while(p>0)
+            {
+                uc2=p%10;
+                if(uc2==uc1)
+                {
+                    cout<<i<<" ";
+                    ok=1;
+                    break;
+                }
+                p=p/10;
+            }
+            if(ok==1)
+            {
+                break;
+            }
+            c=c/10;
+        }
+    }
+    return 0;
+}
